@@ -1,0 +1,660 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    background-color: MintCream;
+    font-family: 'Montserrat', sans-serif;
+
+}
+a{
+    text-decoration: none; /*убрали подчеркивание у сслыок*/
+    color:black;
+}
+
+nav>  ul li  {
+    display: inline-flex;
+}
+nav > ul{
+    margin: 0; 
+    padding: 0;
+    float: right; /*меню справа*/
+    list-style-type: none; /*убрали значки у списка*/
+}
+nav > ul li a{
+    /*padding:0 50px;*/
+    margin: auto 10px auto;
+}
+nav > ul li:hover{
+    background: rgb(250, 154, 102);;
+}
+@media (max-width: 930px) {
+    nav{
+        opacity: 0;
+    }
+}
+img{
+    vertical-align: middle;
+}
+
+header {
+    display: inline-flex;
+    overflow: hidden;
+    background-color: rgb(255,164,116);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    left: 0;
+    width: 100%; /* Full width */
+    height: 50px;
+    line-height: 50px;
+    font-family: 'Russo One', sans-serif;
+    padding-left: 10px;
+    z-index: 2;
+  }
+  main{
+    padding-top: 50px;
+  }
+  footer{
+    display: inline-flex;
+    position: relative;
+    background-color: rgb(255,164,116);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    margin-top: -80px;
+}
+
+  /*контакты и реквизиты*/
+  .adress-1, .requisites{
+   /* text-align: center;*/
+    vertical-align: middle;
+    margin-top: 3%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 3%;
+
+    border: 2px solid rgb(255,164,116);
+    height: 300px;
+
+    /*top: 100px;;
+    left: 20%;
+    */
+    /*display: flex;
+    flex-direction: row;*/
+    
+  }
+
+.requisites{
+    text-align: left;
+    height: 170px;
+}
+.requisites-1{
+    padding-left: 2%;
+}
+.requisites-2{
+    padding-left: 5%;
+}
+.map-img-1{
+    float: left;
+    padding: 2%;
+}
+.map-img-1 img{
+    width: 300px;
+}
+.about-map{
+    display: inline-block;
+    text-align: left;
+    padding-left: 10%;
+}
+.requisites-1, .requisites-2{
+    display: inline-block;
+    text-align: left;
+    
+}
+
+@media (max-width: 1056px) {
+    .adress-1, .requisites{
+        height: 100%;
+    }  
+    .map-img-1{
+        float: none;
+    }
+    .map-img-1 img{ 
+        width: 70%;
+    }  
+    .about-map{
+        padding-left: 2%;
+    }
+    .requisites-2{
+        padding-left: 2%;
+    }
+}
+
+/*им нужен дом*/
+.needhome_nav ul li{
+    display: inline-flex;
+    list-style-type: none; /*убрали значки у списка*/
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.needhome_dogs{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.needhome_dogs_card{
+    position: relative;
+    height: 400px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 5%;
+    margin-right: 5%;
+    border: 4px solid rgb(255,164,116);
+}
+.needhome_dogs_card_pic{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.needhome_dogs_card_text{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background:  rgba(255, 165, 116, 0.711);
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    transition: all 0.8s ease-in-out;
+    
+}
+.needhome_dogs_card:hover .needhome_dogs_card_text{
+    visibility: visible;
+    opacity: 1;
+}
+.needhome_section > h3{
+    text-align: center;
+    color: rgb(255,164,116);
+    font-size: 3em;
+}
+
+
+/*написать нам*/
+
+
+ .decor {
+    position: relative;
+    max-width: 600px;
+    margin:auto;
+ 
+    background: white;
+    border-radius: 30px;
+ }
+
+ .form_fon{
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    padding-top: 70px;
+    background:#f69a73;
+    border-radius: 30px;
+    height: 600px;
+ }
+
+ .form-left-decoration, .form-right-decoration {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background: #f69a73;
+    border-radius: 20px;
+ }
+ .form-left-decoration {
+    bottom: 60px;
+    left: -30px;
+ }
+ .form-right-decoration {
+    top: 60px;
+    right: -30px;
+ }
+ .form-left-decoration:before, .form-left-decoration:after, .form-right-decoration:before, .form-right-decoration:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    border-radius: 30px;
+    background: white;
+ }
+ .form-left-decoration:before {
+    top: -20px;
+ }
+ .form-left-decoration:after {
+    top: 20px;
+    left: 10px;
+ }
+ .form-right-decoration:before {
+    top: -20px;
+    right: 0;
+ }
+ .form-right-decoration:after {
+    top: 20px;
+    right: 10px;
+ }
+ .circle {
+    position: absolute;
+    bottom: 80px;
+    left: -55px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+ }
+ .form-inner {
+    padding: 50px;
+ }
+ .form-inner input, .form-inner textarea {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #E9EFF6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+ }
+ .form-inner input[type="submit"] {
+    margin-top: 30px;
+    background: #f69a73;
+    border-bottom: 4px solid #d87d56;
+    color: white;
+    font-size: 14px;
+ }
+ .form-inner textarea {
+    resize: none;
+ }
+ .form-inner h3 {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #707981;
+ }
+
+ /*FAQ*/
+ .faq{
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    
+ }
+ .faq > h3, .zagolovok{
+    font-size: 3em;
+    text-align: center;
+ }
+
+details > p{
+    font-size: 1.8em;;
+}
+ details > summary{
+    list-style: none;
+    font-size: 2.5em;
+    padding-top: 20px;
+    margin-bottom: 25px;
+ }
+ summary:before {
+    content: "+";
+    font-size: 0.8em;
+    position: relative;
+    top: 10px;
+    float: right;
+    background: rgb(255,164,116);
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    
+ }
+ /*
+ summary:after {
+    content: "";
+    float: right;
+    background: rgba(34, 203, 79, 0.997);
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    right: -25px;
+    z-index: -1;
+ }
+*/
+  
+ details[open] summary:before {
+    content: "-";
+    position: relative;
+    top: 10px;
+    float: right;
+}
+summary:after {
+    content: '';
+    
+    position: relative;
+    top: 10px;
+    height: 20px;
+    background: rgb(255,164,116);
+    float: left;
+    height: 3px;
+    width: 100%;
+ }
+
+ /*они нашли дом*/
+ .havehome{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+ }
+
+ .house {
+    position: relative;    
+    background: rgb(255,164,116);
+    height: 400px;
+    
+    margin: 0 5% 5% 5%;
+    margin-right: 5%;
+    border: 4px solid rgb(255,164,116);
+    border: 4px solid #000;
+}
+.havehome_pic{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    margin: 10% 10% 10% 10%;
+    
+    object-fit: cover;
+}
+
+.roof {
+    width: 100%;
+    padding-bottom: 69%; /* = width / 1.41 */
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.roof:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    
+    height: 100%;
+    background-color:  rgb(255,164,116);
+    transform-origin: 0 100%;
+    transform: rotate(45deg);
+    border: 4px solid #000;
+}
+/*
+ .house:before {
+   
+    content: "";
+    height: 0; 
+    width: 0;
+    position: absolute; 
+    left: 0; 
+    right: 0;
+    top: -60px;
+    border-bottom: 60px solid #B1BA5C;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+}
+*/
+  
+    
+  /*
+  .house:before {
+  
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    width: 100%;
+    height: 20%;
+    background: #000;
+  }
+  */
+      
+  .house1 {
+    position: relative;
+          
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    
+    background: #000;
+  }
+    
+          
+  .house1::before {
+    
+    content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+    top: -12px;
+          
+    width: 0;
+      height: 0;
+      
+      border-bottom: 12px solid #000;
+      border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+.roof > h3{
+    position: relative;
+    text-align: center;
+   /* top: 200px; 
+   bottom: 70px;
+   width: 80px;
+   margin: 0 auto 0 auto;
+
+    text-align: center;
+    */
+}
+
+#this{
+    color: MintCream;
+}
+
+/*Главная первая страница*/
+.news{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+    margin-top: 20px;
+    border: 4px solid rgb(255,164,116);
+}
+.news_pic{
+    width: 40%;
+    height: 40%;
+    margin: auto;
+}
+
+@media (max-width: 669px){
+    .news{
+        flex-direction: column;
+    }
+    .news_pic{
+        width: 100%;
+    }
+}
+
+/*слайдер*/
+.slaider{
+    background-color: rgb(255,164,116);
+    padding: 10px;
+    margin: 0;
+}
+ .mySlides {display: none}
+
+.mySlides fade > img {vertical-align: middle;}
+    .slideshow-container {
+    max-width: 1050px;
+    position: relative;
+    margin: auto;
+}
+/* Кнопки next & previous*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+/* Измените положение "next button" */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+/* Добавьте черный фоновый цвет с небольшой прозрачностью*/
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Точки/маркеры/указатели */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #999999;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+background-color: #111111;
+}
+/* Выцветание анимации */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+/*бургер меню*/
+.burger_menu, #menu-toggle{
+    opacity: 0;
+}
+@media (max-width: 930px){
+.menu-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+   
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition-duration: .25s;
+  }
+  .menu-btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu-btn > span::after {
+    content: '';
+    top: 8px;
+  }
+   
+  .menubox{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: rgb(255, 165, 116);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+  }
+   
+  .menu-item {
+    display: block;
+    padding: 12px 24px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu-item:hover {
+    background-color: #CFD8DC;
+  }
+   
+   
+  #menu-toggle{
+    opacity: 0;
+  }
+   
+  #menu-toggle:checked ~ .menu-btn > span{
+    transform: rotate(45deg);
+  }
+  #menu-toggle:checked ~ .menu-btn > span::before{
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu-toggle:checked ~ .menu-btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu-toggle:checked ~ .menubox{
+    visibility: visible;
+    left: 0;
+  }
+}

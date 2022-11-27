@@ -1,0 +1,145 @@
+<!DOCTYPE html> <!--т-->
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Приют для животных Любимец</title>
+        <!--<link rel="icon" type="image/png" href="favicon.png">-->
+        <link rel ="stylesheet" href="practice_1.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+            <a class="navbar-logo" href="">Любимец <img src="logo-1.png" width="50px"></a>
+
+            </div>
+        <nav>
+            <ul>
+                <li><a id="this" href="index_1.html">О приюте</a></li>
+                <li><a href="index_2.html">Контакты и реквизиты</a></li>
+                <li><a href="index_3.html">Им нужен дом</a></li>
+                <li><a href="index_4.html">Написать нам</a></li>
+                <li><a href="index_5.html">Они нашли себе дом</a></li>
+              </ul>
+        </nav>
+        <div class="burger-menu">
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-btn" for="menu-toggle">
+              <span></span>
+            </label>
+         
+            <ul class="menubox">
+                    <li><a class="menu-item" href="index_1.html">О приюте</a></li>
+                    <li><a class="menu-item" href="index_2.html">Контакты и реквизиты</a></li>
+                    <li><a class="menu-item" href="index_3.html">Им нужен дом</a></li>
+                    <li><a class="menu-item" href="index_4.html">Написать нам</a></li>
+                    <li><a class="menu-item" href="index_5.html">Они нашли себе дом</a></li>
+            </ul>
+          </div>
+        </header>
+        <main>
+            <section class="slaider">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <img src="slaid_1new.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                      <img src="slaid2_new.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                      <img src="slaid3_new.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <script src="script1.js"></script>
+                  </div>
+                  <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                  </script>
+              
+            </section>
+            <h3 class="zagolovok">Новости</h3>
+            <section sclass="section_news">
+                <div class="news">
+                    <p class="news_text">
+                        13.11.2022 г., в день доброты, наш центр принял участие в совместной акции с ФК Арсенал.
+                        Перед началом матча фанаты и любители футбола могли подойти к нашему столику, получить информацию о наших питомцах, познакомиться с беленькой девочкой(из наших подкидышей), узнать время посещения, условия содержания и некоторые нюансы, связанные с домашними любимцами.
+                        До начала матча неравнодушные поклонники футбола принесли более 75 кг кормов для приюта!!!
+                        <br>Всё доставлено в целости и сохранности нашим хвостикам.
+                        <br>Огромное спасибо за проявленную инициативу!</p>
+                    <img src="https://sun1-55.userapi.com/impg/2CmGKbPIFphGcpk-utSe3HfhpbhwjGndLEao-w/Y2cSpX3wKak.jpg?size=1600x720&quality=95&sign=b78e9478f43737108eb3402ca15dde02&type=album"
+                        alt=""
+                        class="news_pic">
+                </div>
+              
+                <div class="news">
+                    <p class="news_text">Спасибо за неоценимую помощь семьям, школам, предприятиям. Без неё нам не справиться.
+                        Щекиноазот привезли корма, пелёнки, салфетки, растворы, наполнители.
+                        Помогли с уборкой.
+                        <br>МБОУ ЦО №9 привезли очень много подарков, которых хватит надолго.
+                        <br>Спасибо всем добрым людям.
+                        <br>Добро и сострадание спасут мир.
+                       </p>
+                    <img src="https://sun9-41.userapi.com/impg/I0cSlWjg-ihTb7yuWVwAG3fIKDQQAxAvoPeRRw/zkUVcj7nI-4.jpg?size=1600x1200&quality=95&sign=17f94a0c459aad252a7f29e5dd0db410&type=album"
+                        alt=""
+                        class="news_pic">
+                </div>
+                <div class="news">
+                    <p class="news_text">Друзья, нам очень важна ваша помощь. Мы ей безмерно дорожим. Спасибо, что заботитесь о наших питомцах!
+                       </p>
+                    <img src="https://sun9-42.userapi.com/impg/GxEvWF5YJ5tbO6q5hlGh9Xjj8w5EV6gECkPDig/qiSszH59gtM.jpg?size=1500x1125&quality=95&sign=975ab7deca832d5c298f59f2b1161262&type=album"
+                        alt=""
+                        class="news_pic">
+                </div>
+                <div class="news">
+                    <p class="news_text">Друзья!
+                        В АПРЕЛЕ на помощь животным без кураторов вы пожертвовали нам 56 830 р., а в "Дни стольника" мы собрали 45 750 р.
+                        В МАЕ на помощь животным без кураторов - 65 100 р., а в "Дни стольника" - 38 750 р.
+                        В ИЮНЕ на помощь животным без кураторов - 51 750 р., а в "Дни стольника" - 32 800 р.
+                        БЛАГОДАРИМ ОТ ВСЕЙ ДУШИ КАЖДОГО, КТО НАС ПОДДЕРЖИВАЕТ! Ваши пожертвования позволили кошкам и собакам "Любимца" пройти лечение, вакцинацию и дождаться своего счастья - новых хозяев и уютного дома.
+                        Каждый ваш рубль - важная помощь!
+                       </p>
+                    <img src="https://sun9-28.userapi.com/impg/8zjOP-gE_yakA6Ayfv093mhKANYfHwb7F_IM7w/zasMKXpZi9o.jpg?size=1200x674&quality=95&sign=ee7774a0cd4b48b67718f06b6b09720d&type=album"
+                        alt=""
+                        class="news_pic">
+                </div>
+            </section>
+            
+            
+        </main>
+    </body>
