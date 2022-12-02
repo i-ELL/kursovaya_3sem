@@ -9,11 +9,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/png" href="logo3.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+
+
     </head>
     <body>
         <header>
             <div class="logo">
-            <a class="navbar-logo" href="">Любимец <img src="logo-1.png" width="50px"></a>
+                <a class="navbar-logo">Любимец <img src="logo3.png" width="30px" height="30px"></a>
 
             </div>
         <nav>
@@ -41,9 +49,12 @@
           </div>
         </header>
         <main>
+            <div class="progress__line js-progress-line"></div>
+            <script src="progress_bar.js"></script>
             <section>
+                <h3 class="zagolovok">Обратите внимание на <a href="#zfaq">часто задаваемые вопросы</a>, а если остались вопросы, смело <a href="#writeus">пишите нам</a></h3>
                 <div class="faq">
-                    <h3>Часто задаваемые вопросы FAQ</h3>
+                    <h3 id="zfaq">FAQ</h3>
                     <details>
                         <summary>Как предать животное в приют?</summary>
                         <p class="answer">Для передачи животного необходимо:
@@ -62,7 +73,7 @@
                     <details>
                         <summary>Почему вы вносите взнос, когда забираете у нас животное?</summary>
                         <p class="answer">Когда вы приходите к нам - вы приходите не в магазин. Вы выбираете не среди игрушек, а среди живых существ, нуждающихся прежде всего в Вашей помощи, Вашей любви, Вашей заботе.
-                            К несчастью, мы уже имели опыт бесплатной отдачи питомцев. Людям легко доставалось животное, и они также легко с ним расставались. В лучшем случае, наши собаки снова оказывались на улице. В худшем - им приходилось иметь дело с перекупщиками, притравщикам и прочими опасными личностями.
+                            К несчастью, мы уже имели опыт бесплатной отдачи питомцев. Людям легко доставалось животное, и они также легко с ним расставались. В лучшем случае, наши собаки снова оказывались на улице. В худшем - им приходилось иметь дело с перекупщиками, притравщиками и прочими опасными личностями.
                             С тех пор мы знаем, что вера на слово, вера в честные глаза и добрые намерения могут обернуться для собаки не передачей в хорошую семью, а очередным перевалочным пунктом, очередным витком неприятностей.
                             Поэтому и взносы за породистых собак больше - шансы угодить в нечестные руки у них гораздо выше.                            
                             Ваш взнос нужен не нам. Он нужен тем беднягам, что остаются в центре и продолжают нуждаться в заботе.                            
@@ -72,7 +83,7 @@
                     </details>
                     <details>
                         <summary>Почему вы вносите взнос, когда оставляете у нас животное?</summary>
-                        <p class="answer">Причины, по которым у нас оставляют животных всегда разные. Но какой бы именно не была эта причина, вы не можете заботиться о животном и передаете отвественность за его судьбу нам.
+                        <p class="answer">Причины, по которым у нас оставляют животных, всегда разные. Но какой бы именно не была эта причина, вы не можете заботиться о животном и передаете отвественность за его судьбу нам.
                             Мы обязательно прививаем его - никто не хочет, чтобы животное заболело или заразило других.                            
                             Мы лечим его, если это необходимо.                            
                             Пока ведутся поиски новых хозяев, животное получает пищу и крышу над головой.                            
@@ -81,12 +92,12 @@
                     </details>
                     <details>
                         <summary>Можно ли забрать питомца, если живем в другом городе?</summary>
-                        <p class="answer">Мы отдаем животных только в Тулу и Тульскую область. Толко туда, где мы можем проследить их судьбу. Быть уверенными, что они попали в хорошие руки, больше не будут скитать по домам и кочеваь из семьи в семью.
+                        <p class="answer">Мы отдаем животных только в Тулу и Тульскую область. Только туда, где мы можем проследить их судьбу. Быть уверенными, что они попали в хорошие руки, больше не будут скитать по домам и кочевать из семьи в семью.
                         </p>
                     </details>
                 </div>
             </section>
-            <h3 class="zagolovok">Если остались вопросы, смело пишите нам!</h3>
+            <h3 class="zagolovok" id="writeus">Написать нам</h3>
             <div class="form_fon">
                 
                 <form class="decor">
@@ -94,14 +105,49 @@
                 <div class="form-right-decoration"></div>
                 <div class="circle"></div>
                 <div class="form-inner">
-                <h3>Написать нам</h3>
+                <h3>Информацию с ответом ожидайте на электронной почте</h3> 
                 <input type="text" placeholder="Имя" required>
                 <input type="email" placeholder="Email" required>
-                <textarea placeholder="Сообщение..." rows="3" required></textarea>
+                <textarea placeholder="Сообщение..." rows="3"></textarea>
+
+
+                <!-- <div class="form">
+                    <h3>Подтвердите, что вы не робот</h3>
+                    <p></p>
+                    <div class="input-block">
+                      <input type="text" placeholder="Введите текст подтверждения" />
+                      <button id="send-captcha" onclick="processInput()">Подтвердить</button>
+                      <button id="send-form" onclick="sendForm()">Отправить форму</button>
+                    </div>
+                  </div>
+                <script src="captcha.js"></script> -->
+
+                <!-- <input type="submit" value="Отправить" onclick="alert('Ваше сообщение успешно отправлено! Ожидайте ответа на электронной почте.')"> -->
                 <input type="submit" value="Отправить">
                 </div>
+                
                 </form>
             </div>
         </main>
+        <footer>
+            <h4 class="autor">© Старухина Елена Вячеславовна<br>ИКБО-01-21</h4>
+            <div class="footer_nav">
+              <h4>Навигация по сайту</h4>
+              <ul>
+                <li><a href="index_1.html">О приюте</a></li>
+                <li><a href="index_2.html">Контакты и реквизиты</a></li>
+                <li><a href="index_3.html">Им нужен дом</a></li>
+                <li><a href="index_4.html">Написать нам</a></li>
+                <li><a href="index_5.html">Они нашли себе дом</a></li>
+              </ul>
+            </div>
+            <div class="footer_aside"><h4>Наша группа Вконтакте</h4>
+              <i class="fa fa-vk" aria-hidden="true" href="https://vk.com/helpanimaltula"></i>
+            </div>
+            <a href="#" class="scrollup">
+              <i class="fa fa-arrow-circle-up"></i>
+            </a>
+            
+          </footer>
     </body>
 </html>

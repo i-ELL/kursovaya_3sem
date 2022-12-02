@@ -9,11 +9,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/png" href="logo3.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+
+
     </head>
     <body>
         <header>
             <div class="logo">
-            <a class="navbar-logo" href="">Любимец <img src="logo-1.png" width="50px"></a>
+            <a class="navbar-logo">Любимец <img src="logo3.png" width="30px" height="30px"></a>
 
             </div>
         <nav>
@@ -41,6 +49,9 @@
           </div>
         </header>
         <main>
+            <div class="progress__line js-progress-line"></div>
+          <script src="progress_bar.js"></script>
+            <h3 class="zagolovok"><a href="#vetcab">Наши ветеринарные кабинеты</a> и <a href="#reqs">реквизиты</a> </h3>
             <map name="map-adress-1">
                  <div class="adress-1">
                     <div class="map-img-1">
@@ -48,7 +59,7 @@
                         <area shape="polygon" coords="0,0, 0, 220, 540,220, 540, 0" href="https://yandex.ru/maps/15/tula/house/naberezhnaya_ulitsa_3/Z04YcQdoTUIEQFtufX12cn1lZw==/?ll=37.708473%2C54.173180&z=15.75" tagret="_blank">
 
                     </div>
-                    <div class="about-map">
+                    <div class="about-map" id="vetcab">
                         <h3>Ветеринарный центр и содержание животных</h3>
                         <p>Адрес: Тула, ул. Набережная, д. 3</p>
                         <p>Режим работы: 9:00 - 20:00</p>
@@ -89,9 +100,9 @@
            </div>
        </map>
        <section>
-        <div class="requisites">
+        <div class="requisites" id="reqs">
             <div class="requisites-1">
-                <h3>Основыне реквизиты:</h3>
+                <h3>Основные реквизиты:</h3>
                 <p>Тульская Городская Общественная организация защиты животных "Май"</p>
                 <p>ИНН: 7103020410</p>
                 <p>Р/с: 40703810766060120249 в Тульском ОСБ № 8604 СБ РФ г. Тулы</p>
@@ -107,7 +118,24 @@
                    
         </main>
         <footer>
-            <p>© 2022 Москва Старухина Елена</p>
-        </footer>
+            <h4 class="autor">© Старухина Елена Вячеславовна<br>ИКБО-01-21</h4>
+            <div class="footer_nav">
+              <h4>Навигация по сайту</h4>
+              <ul>
+                <li><a href="index_1.html">О приюте</a></li>
+                <li><a href="index_2.html">Контакты и реквизиты</a></li>
+                <li><a href="index_3.html">Им нужен дом</a></li>
+                <li><a href="index_4.html">Написать нам</a></li>
+                <li><a href="index_5.html">Они нашли себе дом</a></li>
+              </ul>
+            </div>
+            <div class="footer_aside"><h4>Наша группа Вконтакте</h4>
+              <i class="fa fa-vk" aria-hidden="true" href="https://vk.com/helpanimaltula"></i>
+            </div>
+            <a href="#" class="scrollup">
+              <i class="fa fa-arrow-circle-up"></i>
+            </a>
+            
+          </footer>
     </body>
 </html>

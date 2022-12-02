@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 body{
     height: 100%;
@@ -12,11 +13,15 @@ a{
     text-decoration: none; /*убрали подчеркивание у сслыок*/
     color:black;
 }
-
+nav{
+    position: absolute;
+    right: 10px;
+}
 nav>  ul li  {
     display: inline-flex;
 }
 nav > ul{
+    
     margin: 0; 
     padding: 0;
     float: right; /*меню справа*/
@@ -31,7 +36,8 @@ nav > ul li:hover{
 }
 @media (max-width: 930px) {
     nav{
-        opacity: 0;
+        /*visibility: hidden;*/
+        display: none;
     }
 }
 img{
@@ -51,6 +57,9 @@ header {
     font-family: 'Russo One', sans-serif;
     padding-left: 10px;
     z-index: 2;
+  }
+  .logo{
+    width: 115px;
   }
   main{
     padding-top: 50px;
@@ -107,12 +116,17 @@ header {
     display: inline-block;
     text-align: left;
     padding-left: 10%;
+    padding-top: 2%;
 }
 .requisites-1, .requisites-2{
     display: inline-block;
     text-align: left;
-    
+    padding-top: 1%;
 }
+.requisites-1 p, .requisites-2 p{
+    padding-top: 7px;
+}
+
 
 @media (max-width: 1056px) {
     .adress-1, .requisites{
@@ -120,6 +134,7 @@ header {
     }  
     .map-img-1{
         float: none;
+       
     }
     .map-img-1 img{ 
         width: 70%;
@@ -168,14 +183,21 @@ header {
     width: 100%;
     height: 100%;
     margin: 0;
-    background:  rgba(255, 165, 116, 0.711);
+    background:  rgba(255, 165, 116, 0.836);
     color: black;
     visibility: hidden;
     opacity: 0;
     text-align: center;
+    
+    
     transition: all 0.8s ease-in-out;
     
 }
+.needhome_dogs_card_text  p, .needhome_dogs_card_text h3{
+    margin:  15%;
+}
+
+
 .needhome_dogs_card:hover .needhome_dogs_card_text{
     visibility: visible;
     opacity: 1;
@@ -202,11 +224,11 @@ header {
  .form_fon{
     position: relative;
     max-width: 1000px;
-    margin: 0 auto 0 auto;
+    margin: 5px auto 0 auto;
     padding-top: 70px;
     background:#f69a73;
     border-radius: 30px;
-    height: 600px;
+    height: 550px;
  }
 
  .form-left-decoration, .form-right-decoration {
@@ -299,6 +321,7 @@ header {
  .faq > h3, .zagolovok{
     font-size: 3em;
     text-align: center;
+    padding: 8px 0 8px 0;
  }
 
 details > p{
@@ -308,6 +331,7 @@ details > p{
     list-style: none;
     font-size: 2.5em;
     padding-top: 20px;
+    padding-left: 5px;
     margin-bottom: 25px;
  }
  summary:before {
@@ -323,20 +347,7 @@ details > p{
     text-align: center;
     
  }
- /*
- summary:after {
-    content: "";
-    float: right;
-    background: rgba(34, 203, 79, 0.997);
-    border-radius: 30px;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: 10px;
-    right: -25px;
-    z-index: -1;
- }
-*/
+
   
  details[open] summary:before {
     content: "-";
@@ -360,7 +371,7 @@ summary:after {
  .havehome{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
  }
 
  .house {
@@ -403,36 +414,6 @@ summary:after {
     transform: rotate(45deg);
     border: 4px solid #000;
 }
-/*
- .house:before {
-   
-    content: "";
-    height: 0; 
-    width: 0;
-    position: absolute; 
-    left: 0; 
-    right: 0;
-    top: -60px;
-    border-bottom: 60px solid #B1BA5C;
-    border-left: 200px solid transparent;
-    border-right: 200px solid transparent;
-}
-*/
-  
-    
-  /*
-  .house:before {
-  
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100px;
-    width: 100%;
-    height: 20%;
-    background: #000;
-  }
-  */
       
   .house1 {
     position: relative;
@@ -571,8 +552,8 @@ to {opacity: 1}
 }
 
 /*бургер меню*/
-.burger_menu, #menu-toggle{
-    opacity: 0;
+.burger_menu, #menu-toggle, .menubox{
+    display: none;
 }
 @media (max-width: 930px){
 .menu-btn{
@@ -585,6 +566,8 @@ to {opacity: 1}
     height: 26px;
     cursor: pointer;
     z-index: 1;
+    margin-right: 15px;
+    margin-top: 10px;
   }
    
   .menu-btn > span,
@@ -610,13 +593,13 @@ to {opacity: 1}
     display: block;
     position: fixed;
     visibility: hidden;
-    top: 0;
+    top: 50px;
     left: -100%;
     width: 100%;
     height: 350px;
     text-align: center;
     margin: 0;
-    padding: 80px 0;
+    padding: 30px 0;
     list-style: none;
     background-color: rgb(255, 165, 116);
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
@@ -657,4 +640,81 @@ to {opacity: 1}
     visibility: visible;
     left: 0;
   }
+}
+
+@media (max-width:700px){
+    .form-left-decoration:before, .form-left-decoration:after, .form-right-decoration:before, .form-right-decoration:after, .form-left-decoration, .form-right-decoration, .form-left-decoration, .form-right-decoration{
+        display: none;
+    }
+}
+
+/*футер - подвал*/
+footer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    margin-top: 10px;
+}
+.footer_nav > ul{
+    list-style-type: none; /*убрали значки у списка*/
+}
+.footer_nav >ul > li {
+    padding-top: 9px;
+}
+.autor, .footer_aside, .footer_nav, .scrollup{
+    padding: 10px;
+    text-align: center;
+}
+.footer_aside > i{
+    font-size: 40px;
+}
+.scrollup {
+    width: 50px;
+    font-size: 60px;
+    margin: 0 auto 0 auto;
+}
+
+/*полоса прогресса*/
+.progress__line{
+    height: 7px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    background-color: #000;
+    
+    z-index: 3;
+}
+
+/**/
+.havehome_ptext{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+/* имя на 5 странице */
+.onepet{
+    display: block;
+}
+.homename{
+    position: absolute;
+    bottom: 50px;
+    /* margin: 0 auto 0 auto; */
+    width: 100%;
+    text-align: center;
+    font-size: 1.4em;
+}
+@media (max-width: 953px){
+    .zagolovok{
+        font-size: 1.9em;
+    }
+    .needhome_section > h3{
+        font-size: 1.8em;
+    }
+    
+}
+
+/* кнопка */
+input[type=submit]:active {
+    background-color: #000;
 }
