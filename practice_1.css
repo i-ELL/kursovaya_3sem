@@ -325,7 +325,8 @@ header {
  }
 
 details > p{
-    font-size: 1.8em;;
+    font-size: 1.8em;
+    padding-left: 5px;
 }
  details > summary{
     list-style: none;
@@ -710,6 +711,9 @@ footer{
     }
     .needhome_section > h3{
         font-size: 1.8em;
+    }
+    details > summary{
+        font-size: 1.9em;
     }
     
 }
