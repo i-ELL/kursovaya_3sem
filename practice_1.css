@@ -666,9 +666,7 @@ footer{
     padding: 10px;
     text-align: center;
 }
-.footer_aside > i{
-    font-size: 40px;
-}
+
 .scrollup {
     width: 50px;
     font-size: 60px;
@@ -721,4 +719,7 @@ footer{
 /* кнопка */
 input[type=submit]:active {
     background-color: #000;
+}
+#hyper{
+    font-size: 40px;
 }
