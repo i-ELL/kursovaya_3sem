@@ -28,7 +28,6 @@ nav > ul{
     list-style-type: none; /*убрали значки у списка*/
 }
 nav > ul li a{
-    /*padding:0 50px;*/
     margin: auto 10px auto;
 }
 nav > ul li:hover{
@@ -36,7 +35,6 @@ nav > ul li:hover{
 }
 @media (max-width: 930px) {
     nav{
-        /*visibility: hidden;*/
         display: none;
     }
 }
@@ -85,14 +83,7 @@ header {
     margin-bottom: 3%;
 
     border: 2px solid rgb(255,164,116);
-    height: 300px;
-
-    /*top: 100px;;
-    left: 20%;
-    */
-    /*display: flex;
-    flex-direction: row;*/
-    
+    height: 300px;    
   }
 
 .requisites{
@@ -445,13 +436,6 @@ summary:after {
 .roof > h3{
     position: relative;
     text-align: center;
-   /* top: 200px; 
-   bottom: 70px;
-   width: 80px;
-   margin: 0 auto 0 auto;
-
-    text-align: center;
-    */
 }
 
 #this{
@@ -684,7 +668,7 @@ footer{
     z-index: 3;
 }
 
-/**/
+
 .havehome_ptext{
     text-align: center;
     font-size: 1.5em;
